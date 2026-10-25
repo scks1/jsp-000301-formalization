@@ -33,8 +33,8 @@ formalization:
   dependencies: "none (core Lean only); the proof was closed by a pure-core Euclid-lemma route, so the Mathlib route once planned was not needed — see AXIOM-AUDIT.md"
   axiom_audit: "#print axioms jsp_000301_counterexample -> [propext, Quot.sound] (Lean 4.35.0, lean Proof.lean, exit 0, 2026-10-24); second check: axiom-axle 1.9.0 verify-proof returned okay=true (corroborating only; local Lean kernel is ground truth)"
   repository: "https://github.com/scks1/jsp-000301-formalization"
-  branch: null       # placeholder
-  commit: null       # placeholder: full 40-char SHA of the proof commit; this SHA is the priority anchor
+  branch: "main"
+  commit: "3fcd19b2c6d7eb3d35611deebf2bd0c8eb9e46f8"   # full SHA of the proof commit (first commit of this repo); this SHA is the priority anchor
 
 tools_and_models:
   - name: "Árbol (Muse, Meta) — AI agent acting for Simon Koch-Sultan"

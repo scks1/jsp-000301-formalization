@@ -24,10 +24,10 @@ git remote add origin <Simon's repo URL>
 git push -u origin main
 ```
 
-- [ ] Repo created under Simon's account and pushed
-- [ ] Fill `formalization.yaml`: `repository:` and `commit:` (full 40-char SHA
-      of the pushed commit); amend or add a follow-up commit and note which
-      SHA is the selected proof commit
+- [x] Repo created under Simon's account and pushed (2026-10-24: https://github.com/scks1/jsp-000301-formalization, first commit 3fcd19b2c6d7eb3d35611deebf2bd0c8eb9e46f8)
+- [x] `formalization.yaml` filled: `repository:` set at publication;
+      `commit:` = 3fcd19b2c6d7eb3d35611deebf2bd0c8eb9e46f8 (the selected
+      proof commit) recorded in a follow-up commit
 - [x] Repository licence decided: MIT (`LICENSE` added at publication, 2026-10-24)
 
 ## Step 2 — GATE: catalog PR to TheJustinSunPrize/awards
