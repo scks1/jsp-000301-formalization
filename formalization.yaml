@@ -1,0 +1,56 @@
+# formalization.yaml — JSP submission disclosure for JSP-000301 (claim bundle, repo-ready).
+# Modelled on the Palomar / Formal Frontier formalization.yaml convention
+# as described in the Oct 2026 field guide (munimv2/formal-math-bounties):
+# name the models/tools used, the informal source, and limitations.
+# NOT submitted anywhere; the repository/commit fields are placeholders
+# to be filled at submission time (that step is a Simon gate).
+
+problem:
+  jsp_id: JSP-000301
+  catalog_entry: "problems/catalog-0301-0400.md#JSP-000301"
+  catalog_url: "https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0301-0400.md#JSP-000301"
+  question: "If two consecutive positive integers are powerful, must at least one be a perfect square?"
+  resolution: "No — counterexample pair 12167, 12168 (Golomb 1970)."
+
+informal_source:
+  solver: "Solomon W. Golomb"
+  reference: "[Go70] Powerful numbers, Amer. Math. Monthly 77(8) (1970), 848-852"
+  doi: "10.2307/2317020"
+  counterexample:
+    n: 12167
+    factorization_n: "23^3"
+    n_plus_1: 12168
+    factorization_n_plus_1: "2^3 * 3^2 * 13^2"
+    square_bounds: "110^2 = 12100 < 12167 < 12168 < 12321 = 111^2"
+
+formalization:
+  status: "complete — full proof, no incomplete steps; axiom audit passed 2026-10-24 (see AXIOM-AUDIT.md)"
+  statement_file: "Statement.lean"
+  proof_file: "Proof.lean"
+  target_theorem: "jsp_000301_counterexample"
+  language: "Lean 4"
+  toolchain: "leanprover/lean4:v4.35.0"
+  dependencies: "none (core Lean only); the proof was closed by a pure-core Euclid-lemma route, so the Mathlib route once planned was not needed — see AXIOM-AUDIT.md"
+  axiom_audit: "#print axioms jsp_000301_counterexample -> [propext, Quot.sound] (Lean 4.35.0, lean Proof.lean, exit 0, 2026-10-24); second check: axiom-axle 1.9.0 verify-proof returned okay=true (corroborating only; local Lean kernel is ground truth)"
+  repository: "https://github.com/scks1/jsp-000301-formalization"
+  branch: null       # placeholder
+  commit: null       # placeholder: full 40-char SHA of the proof commit; this SHA is the priority anchor
+
+tools_and_models:
+  - name: "Árbol (Muse, Meta) — AI agent acting for Simon Koch-Sultan"
+    role: "target selection, statement formalization, proof drafting, audit"
+  - name: "Lean kernel (leanprover/lean4 v4.35.0)"
+    role: "proof checking; `by decide` steps are kernel-checked, no native_decide used"
+  - name: "axiom-axle 1.9.0 (AXLE pilot checker)"
+    role: "optional second check only (verify-proof, okay=true, 2026-10-24); not kernel-grade, local Lean is ground truth"
+
+ai_disclosure: >-
+  This formalization was prepared by an AI agent with human oversight.
+  JSP rules impose no distinction among human, human-AI, and autonomous
+  AI contributions; the payee/applicant of record is the natural person
+  named at claim time.
+
+limitations:
+  - "Per-problem prize amounts for JSP-000301's tier are not published; no value is claimed here."
+  - "Statement correspondence (CatalogQuestion vs the catalog's prose question) has been checked by the preparer against the catalog entry and its review note; JSP maintainers perform their own correspondence review."
+  - "Bundle layout: Statement.lean carries the definitions only; Proof.lean is self-contained and canonical, and the repository checks with no incomplete steps in any .lean file."
