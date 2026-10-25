@@ -31,13 +31,17 @@ git push -u origin main
 - [x] Repository licence decided: MIT (`LICENSE` added at publication, 2026-10-24)
 
 ## Step 2 — GATE: catalog PR to TheJustinSunPrize/awards
-- [ ] Fork the awards repo; update the JSP-000301 catalog entry with: Lean
+- [x] Fork the awards repo (2026-10-24: https://github.com/scks1/awards);
+      update the JSP-000301 catalog entry with: Lean
       source repo URL, branch, full commit SHA, statement/proof entry points
       (`Proof.lean`, theorem `jsp_000301_counterexample`), reproduction
       instructions (`lean Proof.lean` on the pinned toolchain), and the
       mathematical-solution evidence (Golomb [Go70])
-- [ ] Open the PR completing the repo's PR template (Simon approves the exact
-      text first)
+- [x] PR opened completing the repo's PR template, with Simon's approval of
+      the exact text (2026-10-24):
+      https://github.com/TheJustinSunPrize/awards/pull/5134 — one file
+      changed (+2 −1); body verified byte-identical to the approved draft
+      on read-back. Merge is the maintainers' step.
 
 ## Step 3 — after the PR merges: claim-award issue
 - [ ] Open the `[Award claim] JSP-000301` issue from Simon's own account
